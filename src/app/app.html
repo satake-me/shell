@@ -1,0 +1,25 @@
+<div class="shell-layout">
+  <header class="shell-header">
+    <div>
+      <p class="eyebrow">Angular Federation</p>
+      <h1>Shell</h1>
+    </div>
+
+    <nav class="shell-nav" aria-label="Navegacao principal">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+      <a routerLink="/mf1" routerLinkActive="active">mf1</a>
+      <a routerLink="/mf2" routerLinkActive="active">mf2</a>
+    </nav>
+  </header>
+
+  <main class="shell-content">
+    <router-outlet />
+  </main>
+
+  <footer class="shell-footer">
+    <span>Host: http://localhost:4200</span>
+    <span>Remotes: 4201 e 4202</span>
+  </footer>
+</div>

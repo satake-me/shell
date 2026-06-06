@@ -1,0 +1,47 @@
+<section class="hero">
+  <div>
+    <p class="label">Arquitetura pronta</p>
+    <h2>Shell isolado carregando dois remotes externos</h2>
+    <p class="description">
+      Este repositorio contem apenas o host. Ele consome mf1 e mf2 por URL, sem compartilhar o mesmo
+      workspace ou repositorio com os remotes.
+    </p>
+  </div>
+
+  <div class="hero-card">
+    <span>Fluxo local</span>
+    <strong>shell -> federation.manifest.json -> mf1/mf2</strong>
+    <small>Suba os tres repositorios em paralelo para navegar entre os remotes.</small>
+  </div>
+</section>
+
+<section class="projects">
+  @for (project of projects; track project.name) {
+    <article class="project-card">
+      <div class="project-header">
+        <h3>{{ project.name }}</h3>
+        <span>localhost:{{ project.port }}</span>
+      </div>
+      <p>{{ project.description }}</p>
+    </article>
+  }
+</section>
+
+<section class="steps">
+  <article>
+    <h3>1. Suba os remotes</h3>
+    <p>Execute <code>npm start</code> em <code>../mf1</code> e <code>../mf2</code>.</p>
+  </article>
+
+  <article>
+    <h3>2. Suba o shell</h3>
+    <p>
+      Execute <code>npm start</code> neste repositorio e abra <code>http://localhost:4200</code>.
+    </p>
+  </article>
+
+  <article>
+    <h3>3. Navegue pelas rotas</h3>
+    <p>Acesse <code>/mf1</code> e <code>/mf2</code> para carregar cada remote de forma lazy.</p>
+  </article>
+</section>
